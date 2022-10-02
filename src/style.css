@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/*
+安全区适配
+*/
+@supports (bottom: env(safe-area-inset-bottom)) {
+  #app {
+    padding-bottom: constant(safe-area-inset-bottom);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* <!-- 开启底部安全区适配 --> */
+/* <van-number-keyboard safe-area-inset-bottom /> */
+
+.flex-wrapper {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-fdc {
+  flex-direction: column;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-sa {
+  justify-content: space-around;
+}
+.flex-jc-sp {
+  justify-content: space-between;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.layout-center {
+  margin: 0 auto;
+}
