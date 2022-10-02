@@ -2,12 +2,10 @@
 
 <template>
   <div class="main-box">
-    <h3>正在构建...</h3>
+    <h3>正在构建apply</h3>
   </div>
 </template>
 
 <style scoped lang="less">
-// .main-box {
-//   margin-top: 200px;
-// }
+
 </style>

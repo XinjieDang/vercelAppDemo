@@ -12,6 +12,18 @@ const router = createRouter({
           path: '/index',
           component: () => import('../view/index/index.vue'),
         },
+        {
+          path: '/apply',
+          component: () => import('../view/apply/index.vue'),
+        },
+        {
+          path: '/message',
+          component: () => import('../view/message/index.vue'),
+        },
+        {
+          path: '/user',
+          component: () => import('../view/user/index.vue'),
+        },
       ],
     },
   ],

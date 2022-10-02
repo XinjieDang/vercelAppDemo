@@ -26,14 +26,14 @@ import NavTab from '../../components/navTab/NavTab.vue';</script>
   height: 100vh;
 
   .main {
+    margin-top: 121px;
     font-size: 14px;
-    background: rgb(249, 249, 245);
+    //background: rgb(249, 249, 245);
   }
-
 
   .header {
     width: 100%;
-    height: 153px;
+    height: 150px;
     background: linear-gradient(315deg, #4b98ed, #0d94fc);
     font-size: 14px;
 
@@ -53,7 +53,7 @@ import NavTab from '../../components/navTab/NavTab.vue';</script>
         margin-top: 8px;
         width: 343px;
         height: 173px;
-        background: #ffffff;
+        background: #efeded;
         border-radius: 6px;
         text-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
 
