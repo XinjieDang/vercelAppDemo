@@ -1,8 +1,9 @@
-<script setup></script>
+<script setup>
+import Menu from '../../components/menu/Menu.vue';</script>
 
 <template>
   <div class="main-box">
-    <h3>正在构建apply</h3>
+    <Menu></Menu>
   </div>
 </template>
 

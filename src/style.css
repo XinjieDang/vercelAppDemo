@@ -34,7 +34,10 @@
   justify-content: center;
   align-items: center;
 }
-.flex-jc-sp {
+.flex-v {
+  align-items: center;
+}
+.flex-jc-sb {
   justify-content: space-between;
 }
 .flex-wrap {
