@@ -30,6 +30,10 @@
 .flex-jc-sa {
   justify-content: space-around;
 }
+.flex-v-h-c {
+  justify-content: center;
+  align-items: center;
+}
 .flex-jc-sp {
   justify-content: space-between;
 }
