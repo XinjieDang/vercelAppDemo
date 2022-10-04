@@ -5,23 +5,27 @@ const router = createRouter({
   routes: [
     {
       path: '/',
+      redirect: '/layout/index',
+    },
+    {
+      path: '/layout',
       name: 'layout',
       component: () => import('../view/layout/layout.vue'),
       children: [
         {
-          path: '/index',
+          path: 'index',
           component: () => import('../view/index/index.vue'),
         },
         {
-          path: '/apply',
+          path: 'apply',
           component: () => import('../view/apply/index.vue'),
         },
         {
-          path: '/message',
+          path: 'message',
           component: () => import('../view/message/index.vue'),
         },
         {
-          path: '/user',
+          path: 'user',
           component: () => import('../view/user/index.vue'),
         },
       ],

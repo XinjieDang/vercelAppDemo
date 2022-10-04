@@ -9,10 +9,10 @@ defineProps({
   
 <template>
   <van-tabbar route v-model="active">
-    <van-tabbar-item replace to="/index" icon="home-o">首页</van-tabbar-item>
-    <van-tabbar-item replace to="/apply" icon="apps-o">应用</van-tabbar-item>
-    <van-tabbar-item replace to="/message" icon="chat-o" badge="5">消息</van-tabbar-item>
-    <van-tabbar-item replace to="/user" icon="user-o">我的</van-tabbar-item>
+    <van-tabbar-item replace to="/" icon="home-o">首页</van-tabbar-item>
+    <van-tabbar-item replace to="/layout/apply" icon="apps-o">应用</van-tabbar-item>
+    <van-tabbar-item replace to="/layout/message" icon="chat-o" badge="5">消息</van-tabbar-item>
+    <van-tabbar-item replace to="/layout/user" icon="user-o">我的</van-tabbar-item>
   </van-tabbar>
 </template>
   

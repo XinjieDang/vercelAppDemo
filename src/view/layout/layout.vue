@@ -1,5 +1,6 @@
 <script setup>
-import NavTab from '../../components/navTab/NavTab.vue';</script>
+import NavTab from '../../components/navTab/NavTab.vue'
+</script>
 
 <template>
   <div class="contaier flex-wrapper flex-fdc">
