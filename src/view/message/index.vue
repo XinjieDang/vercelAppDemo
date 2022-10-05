@@ -80,18 +80,18 @@ const userList = reactive(
   margin-top: 12px;
   height: 70px;
   opacity: 0.68;
-  background: #aea2a2;
+  background: #ffffff;
   border-radius: 6px;
   color: #333333;
   line-height: 20px;
-  text-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
 
   .msg-item {
     width: 45px;
     height: 45px;
     background: linear-gradient(180deg, #5abfea, #1e95dd);
     border-radius: 50%;
-    text-shadow: 0px 3px 6px 0px rgba(45, 160, 224, 0.50);
+    box-shadow: 0px 3px 6px 0px rgba(45, 160, 224, 0.50);
   }
 
   .volume-item {

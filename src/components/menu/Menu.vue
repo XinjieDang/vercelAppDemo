@@ -59,10 +59,10 @@ const menuList = reactive([
 ])
 </script>
 <template>
-  <div class="main-box" v-for="(item,index) in menuList" :key="item.id">
+  <div class="main-box" v-for="(item,index) in menuList" :key="index">
     <div class="title-box"><span>{{item.title}}</span></div>
     <div class="menu-list flex-wrapper flex-wrap">
-      <div class="menu-item" v-for="(every, index) in item.list" :key="item.index">
+      <div class="menu-item" v-for="(every, index) in item.list" :key="index">
         <ul :style="{ background:every.background }">
           <li>
             <van-icon size="40px" :name="every.icon" color="#ffffff" />

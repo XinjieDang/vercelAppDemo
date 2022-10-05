@@ -1,8 +1,10 @@
 <script setup>
 import { reactive } from 'vue'
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
 const menuList = reactive([
-  { id: 1, title: '我的房屋', icon: 'chat-o', background: '#66BCFF' },
+  { id: 1, title: '我的房屋', icon: 'chat-o', background: '#66BCFF', path: '/myHome' },
   { id: 2, title: '访客邀请', icon: 'friends-o', background: '#1693C9' },
   { id: 3, title: '手机开门', icon: 'newspaper-o', background: '#8080FF' },
   { id: 4, title: '生活缴费', icon: 'after-sale', background: '#F59B22' },
@@ -15,6 +17,9 @@ const categoryList = reactive([
   { id: 5, title: '问卷调查', icon: 'edit', background: '#C849CE' },
   { id: 6, title: '社区公告', icon: 'envelop-o', background: '#A3C869' },
 ])
+const handleGoPage = (path) => {
+  router.push(path)
+}
 </script>
 
 <template>
@@ -31,7 +36,7 @@ const categoryList = reactive([
     <span class="title"> 常用服务 </span>
     <!-- list -->
     <div class="menu-list flex-wrapper flex-wrap flex-jc-sa">
-      <div class="menu-item" v-for="(item, index) in menuList" :key="item.id">
+      <div class="menu-item" v-for="(item, index) in menuList" :key="index" @click="handleGoPage(item.path)">
         <ul :style="{ background: item.background }">
           <li>
             <van-icon size="40px" :name="item.icon" color="#ffffff" />
@@ -45,7 +50,7 @@ const categoryList = reactive([
     <span class="title"> 智慧社区 </span>
     <!-- list -->
     <div class="menu-list flex-wrapper flex-wrap flex-jc-sa">
-      <div class="club-menu-item" v-for="(item, index) in categoryList" :key="item.id">
+      <div class="club-menu-item" v-for="(item, index) in categoryList" :key="index">
         <ul :style="{ background: item.background }">
           <p>{{ item.title }}</p>
           <li>
@@ -81,8 +86,9 @@ const categoryList = reactive([
       width: 343px;
       height: 173px;
       background: url(../../assets/img/bg.png) no-repeat;
+      //background: #ffffff;
       border-radius: 6px;
-      text-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15);
 
       .title-cart {
         padding: 31px 0 0 20px;
