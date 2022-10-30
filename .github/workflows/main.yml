@@ -1,0 +1,37 @@
+#工作流名称
+name: deploy-website
+#定义工作流触发时机，当master分支有push时，触发
+on:
+  push:
+   branches:
+    - master
+#任务，可通过needs指定任务顺序
+jobs:
+ main:
+ #工作流运行的虚拟机环境，默认ubuntu
+  runs-on: ubuntu-laster
+  #当前任务下的步骤
+  steps:
+  #步骤名 Checkout 拉取代码
+   - name: Checkout
+     #步骤使用的actions，可以是一个或多个
+     uses: actions/checkout@v2
+     with:
+      persist-credentials: false
+      
+    #安装依赖和打包
+   - name: Install and Build
+     #步骤的命令 env步骤所需环境
+     run: |
+        npm install
+        npm run build
+   #部署
+   - name: Deploy
+     uses: JamesIves/github-pages-deploy-action@releases/v3
+     with:
+      #权限秘钥
+      ACCESS_TOKEN: ${{secrets.ACCESS_TOKEN}}
+      #要推送的分支
+      BRANCH: gh-pages
+      #打包好的静态文件目录 react项目为buid，vue项目为dist
+      FOLDER: dist
