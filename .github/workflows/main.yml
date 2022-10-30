@@ -21,10 +21,10 @@ jobs:
    - name: Checkout
      #步骤使用的actions，可以是一个或多个
      uses: actions/checkout@v2
-     with:
+      with:
       persist-credentials: false
      uses: actions/setup-node@v2 #node.js环境
-     with:
+      with:
        node-version: '14.x' #node.js版本
     #2、安装依赖和打包
    - name: Install and Build
@@ -35,12 +35,12 @@ jobs:
    #3、上传自服务器部署
    - name: copy dist file with deploy
      uses: appleboy/scp-action@v0.0.1
-     with:
-      host: ${{secrets.REMOTE_HOST}}
-      username: ${{secrets.REMOTE_USER}}
-      password: ${{secrets.REMOTE_PASS}}
-      port: 22
-      source: 'docs/',
-      target: ${{secrets.REMOTE_TAGRET}}
+      with:
+       host: ${{secrets.REMOTE_HOST}}
+       username: ${{secrets.REMOTE_USER}}
+       password: ${{secrets.REMOTE_PASS}}
+       port: 22
+       source: 'docs/',
+       target: ${{secrets.REMOTE_TAGRET}}
 
      
