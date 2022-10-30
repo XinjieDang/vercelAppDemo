@@ -10,7 +10,7 @@ on:
 jobs:
  main:
  #工作流运行的虚拟机环境，默认ubuntu
-  runs-on: ubuntu-laster
+  runs-on: ubuntu-lastest
   #当前任务下的步骤
   steps:
   #步骤名 1、Checkout 拉取代码
@@ -31,11 +31,11 @@ jobs:
    - name: copy dist file with deploy
      uses: appleboy/scp-action@v0.0.1
      with:
-      host: ${{secrets.REMOTE_HOST}}
-      username: ${{secrets.REMOTE_USER}}
-      password: ${{secrets.REMOTE_PASS}}
-      port: 22
-      source: 'docs/'
-      target: ${{secrets.REMOTE_TAGRET}}
+       host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        password: ${{ secrets.REMOTE_PASS }}
+        port: 22
+        source: '/docs'
+        target: ${{ secrets.REMOTE_TAGRET }}
 
      
