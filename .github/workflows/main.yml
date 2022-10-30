@@ -5,9 +5,6 @@ on:
   push:
    branches:
     - master
-  pull-request:
-   branches:
-    - master
   workflow_dispatch:
 #任务，可通过needs指定任务顺序
 jobs:
@@ -34,11 +31,11 @@ jobs:
    - name: copy dist file with deploy
      uses: appleboy/scp-action@v0.0.1
      with:
-       host: ${{secrets.REMOTE_HOST}}
-       username: ${{secrets.REMOTE_USER}}
-       password: ${{secrets.REMOTE_PASS}}
-       port: 22
-       source: 'docs/',
-       target: ${{secrets.REMOTE_TAGRET}}
+      host: ${{secrets.REMOTE_HOST}}
+      username: ${{secrets.REMOTE_USER}}
+      password: ${{secrets.REMOTE_PASS}}
+      port: 22
+      source: 'docs/'
+      target: ${{secrets.REMOTE_TAGRET}}
 
      
