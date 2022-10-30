@@ -10,7 +10,7 @@ on:
 jobs:
  main:
  #工作流运行的虚拟机环境，默认ubuntu
-  runs-on: ubuntu-laster
+  runs-on: ubuntu-latest
   #当前任务下的步骤
   steps:
   #步骤名 1、Checkout 拉取代码
